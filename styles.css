@@ -1,0 +1,397 @@
+:root {
+    --color-bg:#303843;
+    --color-text-default: white;
+    --color-grey-text-default: rgb(189, 189, 189);
+    --color-secondary-text-default: rgb(198, 192, 72);
+    --color-secondary-text-hover: rgb(253, 245, 125);
+    --color-nav-bg-hover:#7586a0eb;
+    --color-nav-border-default: rgba(199, 215, 229, 0.427);
+    --color-nav-text-active: rgb(254, 168, 168);
+    --color-nav-text-hover: rgb(227, 122, 122);
+    --color-nav-text-shadow: rgba(44, 44, 44, 0.5);
+    --color-btn-bg-default: #17283f;
+    --color-btn-bg-hover: #536989db;
+    --margin-large: 6rem;
+    --margin-middle: 4rem;
+    --margin-small: 2rem;
+}
+
+html {
+    font-size: 1rem;
+}
+
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;   
+    margin: 0 0;
+    padding: 0 0;
+}
+
+body {
+    color: var(--color-text-default);
+    background-color: var(--color-bg);
+    margin: 2rem 5rem;
+}
+
+main > p {  /* other pages */
+    font-size: xx-large;
+    margin: 5vh 0;
+}
+
+.small {
+    font-size: smaller;
+    font-weight: lighter;
+    color: var(--color-grey-text-default);
+}
+
+i {
+    color: var(--color-bg);
+    background-color: var(--color-secondary-text-hover);
+    border-radius: 3em;
+    text-align: center;
+    width: 1em;
+    height: 1em;
+}
+
+.default-button:not(.fa) {
+    font-size: medium;
+    color: var(--color-secondary-text-default);
+    background-color: transparent;
+    border: 0.1px solid var(--color-nav-border-default);
+    border-radius: 1em;
+    padding: 0.5em 3em;
+}
+
+.default-button:not(.fa):hover {
+    cursor: pointer;
+    color: var(--color-secondary-text-hover);
+    box-shadow: inset 14em 0 0 var(--color-nav-bg-hover);
+    text-shadow: 0px 2px 3px var(--color-nav-text-shadow);
+    transition: all 0.5s ease-in-out;
+}
+
+.default-button.fa {
+    color: var(--color-secondary-text-default);
+    background-color: transparent;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.default-button.fa:hover {
+    cursor: pointer;
+    color: var(--color-secondary-text-hover);
+    text-shadow: 0px 2px 3px var(--color-nav-text-shadow);
+    scale: 1.2;
+    transition: all 0.5s ease-in-out;
+}
+
+/* ---------------------------- header ------------------------------ */
+
+header {
+    margin-bottom: var(--margin-small);
+    text-align: center;
+}
+
+header img {
+    height: clamp(80px, 16vw, 100px);
+}
+
+/* ---------------------------- nav ------------------------------ */
+
+nav {
+    margin-bottom: var(--margin-middle);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* ---------------------------- nav.horizontal  ------------------------------ */
+
+.horizontal-nav li {
+    border-bottom: 0.01px solid var(--color-nav-border-default);
+    border-radius: 1em 1em 0 0;
+    flex: 1 1 auto;
+}
+
+.horizontal-nav a {
+    font-size: clamp(1em, 2.25vh, 1.2em);
+    color: var(--color-grey-text-default);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5em 0;
+    width: 100%;
+}
+
+.horizontal-nav li:hover {
+    cursor: pointer;
+    background-color: var(--color-nav-bg-hover);
+    border-bottom-color: transparent;
+    border-radius: 1em;
+    transition: all 0.5s ease-in-out;
+}
+
+.horizontal-nav li:hover a {
+    color: var(--color-nav-text-hover);
+    text-shadow: 0px 1px 2px var(--color-nav-text-shadow);
+    transition: all 0.5s ease-in-out;
+}
+
+.horizontal-nav li.active {
+    border-bottom: 2px solid var(--color-nav-text-hover);
+}
+
+.horizontal-nav li.active a {
+    color: var(--color-nav-text-hover);
+}
+
+.horizontal-nav li.active:hover {
+    border-bottom-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+/* ---------------------------- nav.vertical  ------------------------------ */
+
+.vertical-nav {
+    display: none;
+    justify-content: flex-end;
+    gap: 0.5em 0.5em;
+    padding-bottom: 1em;
+    border-bottom: 0.01px solid var(--color-nav-border-default);
+}
+
+.vertical-nav button {
+    font-size: 1.5em;
+    color: var(--color-grey-text-default);
+    background-color: transparent;
+    border: 0.01px solid var(--color-nav-border-default);
+    border-radius: 0.8em;
+    width: 2em;
+    height: 2em;
+}
+
+.vertical-nav li.active button {
+    color: var(--color-nav-text-active);
+    border-color: var(--color-nav-text-active);
+}
+
+.vertical-nav li:hover button {
+    cursor: pointer;
+    color: var(--color-nav-text-hover);
+    background-color: var(--color-nav-bg-hover);
+    border-color: transparent;
+    text-shadow: 0px 1px 2px var(--color-nav-text-shadow);
+    transition: all 0.5s ease-in-out;
+}
+
+/* ---------------------------- main: promotions ------------------------------ */
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 4em;
+    margin-bottom: var(--margin-large);
+}
+
+.promotions {
+    display: grid;
+    grid-template-areas: ". . img"
+                        "hd hd img"
+                        "ct ct img"
+                        "btn btn img"
+                        "remark remark img"
+                        ". . img";
+    grid-template-columns: 0fr 1.25fr 0.6fr;
+    grid-template-rows: 0.25fr repeat(4, 0.5fr) 0.25fr;
+    align-items: center;
+    gap: 1.5em 3em;
+}
+
+h1 {
+    grid-area: hd;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+}
+
+.discount-content {
+    grid-area: ct;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+}
+
+.action-content {
+    grid-area: btn;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7em 1.5em;
+}
+
+.share-buttons a {
+    margin-left: 0.1em;
+    text-decoration: none;
+}
+
+.remark-content {
+    grid-area: remark;
+    align-self: flex-end;
+    line-height: 1.5;
+}
+
+.promotions img {
+    grid-area: img;
+    width: 100%;
+    max-height: 450px;
+    min-height: 300px;
+    border-radius: 2.5em;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+/* ---------------------------- main: information ------------------------------ */
+
+.information {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 4em 2.5em;
+}
+
+.information section {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em 0em;
+}
+
+.information img {
+    border-radius: 1.5em;
+    object-fit: contain;
+    object-position: center bottom;
+    width: 100%;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2.25vw, 2rem);
+    margin-top: 0.5em;
+}
+
+.information p {
+    line-height: 1.75;
+    margin-bottom: 1em;
+}
+
+.information input{
+    margin: auto auto 0 0;
+}
+
+/* ---------------------------- footer ------------------------------ */
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5em 3em;
+}
+
+footer img {
+    width: 7em;
+}
+
+/* ---------------------------- animation ------------------------------ */
+
+.animation {
+    display: inline-flex;
+    flex-direction: column nowrap;
+    column-gap: 0.15em;
+}
+
+.animation span {
+    animation: text-color-animation 2s steps(1,end) infinite,
+                text-position-animation 1s linear infinite alternate-reverse;
+    animation-delay: calc(0.6s * var(--i));
+}
+
+@keyframes text-color-animation {
+    from {
+        color: var(--color-text-default);
+    }
+    15% {
+        color: var(--color-nav-text-active);
+    }
+    30% {
+        color: var(--color-secondary-text-hover);
+    }
+    45% {
+        color: #57F287;
+    }
+    60% {
+        color: #45B1E8;
+    }
+    75% {
+        color: rgb(209, 134, 209);
+    }
+    to {
+        color: black;
+    }
+}
+
+@keyframes text-position-animation {
+    from {
+        transform: translateY(0em);
+    }
+    to {
+        transform: translateY(calc(0.1em * var(--i)));
+    }
+}
+
+/* ---------------------------- media ------------------------------ */
+
+@media only screen and (max-width: 750px) {
+    body {
+        margin: 2rem;
+    }
+
+    .horizontal-nav {
+            display: none;
+        }
+ 
+    .vertical-nav {
+        display: flex;
+
+    }
+
+    .information {
+        flex-flow: row wrap;        
+    }
+
+    .promotions {
+        grid-template-columns: 0.25fr 2fr 0.25fr;
+        grid-template-rows: 0.25fr repeat(4, 0.5fr) 0.25fr;
+        gap: 2em 0em;
+    }
+
+    .promotions img {
+        border-radius: 1.5em;
+        grid-row-start: 1;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        z-index: -10;
+        width:100%;
+        height: clamp(200px, 100%, 500px);
+    }
+
+    h1,
+    .discount-content,
+    .action-content,
+    .remark-content {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}

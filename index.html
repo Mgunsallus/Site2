@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+        <title>Hair Day</title>
+        <meta name="title" content="Hair Day">
+        <meta name="description" content="Hair Day which is a full-service and creative hair salon in Madison, Wisconsin provides edgy hair colors, on-trend cuts, makeup and nail services">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <link rel="icon" rel="icon" type="image/png" href="logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="logo-large-color.png" alt="Logo of Hair Day" title="Logo of Hair Day"/>
+        </header>
+        <nav>
+            <ul class="horizontal-nav">
+                <li class="active">
+                    <a href="index.html" title="Home">Home</a>
+                </li>
+                <li>
+                    <a href="services.html" title="Services">Services</a>
+                </li>
+                <li>
+                    <a href="stylists.html" title="Stylists">Stylists</a>
+                </li>
+                <li>
+                    <a href="tutorials.html" title="Tutorials">Tutorials</a>
+                </li>
+            </ul>
+            <ul class="vertical-nav">
+                <li class="active">
+                    <button class="fa fa-solid fa-home" onclick="location.href='index.html'" title="Home"></button>
+                </li>
+                <li>
+                    <button class="fa fa-solid fa-flag" onclick="location.href='services.html'" title="Services"></button>
+                </li>
+                <li>
+                    <button class="fa fa-solid fa-user" onclick="location.href='stylists.html'" title="Stylists"></button>
+                </li>
+                <li>
+                    <button class="fa fa-solid fa-book" onclick="location.href='tutorials.html'" title="Tutorials"></button>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <article class="promotions">
+                <h1>Coloring Discount</h1>
+                <p class="discount-content">
+                    <span class="animation">
+                        <span style="--i:1">5</span>
+                        <span style="--i:2">0</span>
+                        <span style="--i:3">%</span>
+                        <span> </span>
+                        <span style="--i:4">O</span>
+                        <span style="--i:5">F</span>
+                        <span style="--i:6">F</span>
+                    </span>
+                    discount is now available for any coloring until the end of May 2023.
+                </p>
+                <p class="remark-content small">
+                    <i class="fa fa-solid fa-info"></i>
+                    Notice: Coloring is only available for small amount each week. Please make an
+                    appointments in advance.
+                </p>
+                <div class="action-content">
+                    <input class="default-button" type="button" value="Book Now" title="Book Now"
+                        onclick="alert('Sorry, the reservation service is experiencing maintenance. We will return shortly.')"/>
+                    <div class="share-buttons">
+                        <small class="small">Share With</small>
+                        <a class="default-button fa fa-brands fa-twitter" title="Follow on Twitter" href="https://twitter.com/" target="_blank"></a>
+                        <a class="default-button fa fa-brands fa-facebook-f" title="Follow on Facebook" href="https://www.facebook.com/" target="_blank"></a>
+                        <a class="default-button fa fa-brands fa-instagram" title="Follow on Instagram" href="https://www.instagram.com/" target="_blank"></a>
+                    </div>
+                </div>
+                <img src="countdown-vr.jpg" alt="Countdown for Discount" title="Countdown for Discount">
+            </article>
+            <article class="information">
+                <section>
+                    <img src="salon.jpg" alt="Relax with Our Comfortable Salon" title="Relax with Our Comfortable Salon">
+                    <h2>Treat Yourself</h2>
+                    <p>Come to our full-service and creative hair salon in Madison, Wisconsin and enjoy edgy hair colors, on-trend cuts, makeup and nail services ...</p>
+                    <input class="default-button" type="button" value="View More" title="View More on Services Page" onclick="location.href='services.html'">
+                </section>
+                <section>
+                    <img src="change.jpg" alt="A Flower Changes Through Time" title="A Flower Changes Through Time">
+                    <h2>Change Yourself</h2>
+                    <p>Thinking about making a change to your hair style or color? Welcome to find out what our stylists and clients say and ask us questions here ...</p>
+                    <input class="default-button" type="button" value="Get Started" title="Get Started on Stylists Page" onclick="location.href='stylists.html'">
+                </section>
+                <section>
+                    <img src="inspire.jpg" alt="Inspire by Learning Knowledge" title="Inspire by Learning Knowledge">
+                    <h2>Inspire Yourself</h2>
+                    <p>In these posts, we are thrilled to share makeup and nail tutorials with you for some pieces of inspiration ...</p>
+                    <input class="default-button" type="button" value="Begin Tour" title="Begin Tour on Tutorials Page"  onclick="location.href='tutorials.html'">
+                </section>
+            </article>
+        </main>
+        <footer>
+            <div>
+                <img class="logo" src="logo-small-color.png" alt="Logo of Hair Day" title="Logo of Hair Day" />
+            </div>
+            <div>
+                <small class="small">© 2023 Hair Day</small>
+            </div>
+        </footer>
+    </body>
+</html>
